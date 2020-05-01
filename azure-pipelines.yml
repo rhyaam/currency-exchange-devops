@@ -18,4 +18,5 @@ steps:
   inputs:
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_secure_key=$(publickey.secureKeyPath)'
     environmentServiceName: 'azure-resource-manager-service-connection'
