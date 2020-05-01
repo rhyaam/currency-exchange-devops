@@ -4,14 +4,14 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+steps:
+- script: echo Hello, Terraform!
+  displayName: 'Run a one-line script'pt'
+
 - task: DownloadSecureFile@1
   name: publickey
   inputs:
     secureFile: 'azure_rsa.pub'
-
-steps:
-- script: echo Hello, Terraform!
-  displayName: 'Run a one-line script'pt'
 
 - task: TerraformCLI@0
   inputs:
