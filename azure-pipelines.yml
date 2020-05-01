@@ -5,9 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, Terraform!
-  displayName: 'Run a one-line script'pt'
-
+- script: echo Hello Terraform!
+  displayName: 'Run a one-line script'
 - task: DownloadSecureFile@1
   name: publickey
   inputs:
@@ -17,5 +16,5 @@ steps:
   inputs:
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
-    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_secure_key=$(publickey.secureKeyPath)'
     environmentServiceName: 'azure-resource-manager-service-connection'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_secure_key=$(publickey.secureKeyPath)'
