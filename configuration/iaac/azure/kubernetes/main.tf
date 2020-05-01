@@ -8,7 +8,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_kubernetes_cluster" "terraform-k8s" {
+resource "azurerm_kubernetes_cluster" "terraform-kubernetes-resource" {
   name                = "${var.cluster_name}_${var.environment}"
   location            = azurerm_resource_group.resource_group.location
   resource_group_name = azurerm_resource_group.resource_group.name

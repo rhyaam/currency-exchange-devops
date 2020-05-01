@@ -14,16 +14,14 @@ variable node_count {
   default = 3
 }
 
-
-
 variable dns_prefix {
-  default = "k8stest"
+  default = "rhyaamdns"
 }
 
 variable cluster_name {
-  default = "k8stest"
+  default = "rhyaamcluster"
 }
 
 variable resource_group {
-  default = "kubernetes"
+  default = "rhyaamresourcegroup"
 }
