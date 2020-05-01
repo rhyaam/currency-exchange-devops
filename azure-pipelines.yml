@@ -13,7 +13,6 @@ steps:
 - script: echo Hello, Terraform!
   displayName: 'Run a one-line script'pt'
 
-- 
 - task: TerraformCLI@0
   inputs:
     command: 'destroy'
