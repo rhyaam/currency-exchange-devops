@@ -15,13 +15,13 @@ variable node_count {
 }
 
 variable dns_prefix {
-  default = "rhyaamdns"
+  default = "mydns"
 }
 
 variable cluster_name {
-  default = "rhyaamcluster"
+  default = "mycluster"
 }
 
 variable resource_group {
-  default = "rhyaamresourcegroup"
+  default = "myresourcegroup"
 }
